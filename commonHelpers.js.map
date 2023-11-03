@@ -1,1 +1,1 @@
-{"version":3,"file":"commonHelpers.js","sources":["../src/main.js"],"sourcesContent":["console.log(\"hello world\");"],"names":[],"mappings":"ssBAAA,QAAQ,IAAI,aAAa"}
+{"version":3,"file":"commonHelpers.js","sources":["../src/main.js"],"sourcesContent":["console.log(\"hello world\");\nconsole.log(\"check\");"],"names":[],"mappings":"ssBAAA,QAAQ,IAAI,aAAa,EACzB,QAAQ,IAAI,OAAO"}
