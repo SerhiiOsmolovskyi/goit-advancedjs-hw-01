@@ -26,13 +26,22 @@ const populateFormFields = () => {
 
 const handleSubmit = (event) => {
   event.preventDefault();
+
+  const emailValue = emailInput.value.trim();
+  const messageValue = messageTextarea.value.trim();
+
+  if (emailValue === '' || messageValue === '') {
+    alert('Please, fill each fields!');
+    return;
+  }
+
   const formData = {
-    email: emailInput.value,
-    message: messageTextarea.value,
+    email: emailValue,
+    message: messageValue,
   };
-  
+
   console.log(formData);
-  
+
   localStorage.removeItem(storageKey);
   emailInput.value = '';
   messageTextarea.value = '';
