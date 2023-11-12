@@ -25,30 +25,32 @@ gallery.innerHTML = createMarkup(galleryItems);
 
 // Створіть новий екземпляр SimpleLightbox для галереї
 const lightbox = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionsDelay: 250
 });
 
-gallery.addEventListener('click', handlerClick);
+// gallery.addEventListener('click', handlerClick);
 
-function handlerClick(event) {
-  event.preventDefault();
-  if (event.currentTarget === event.target) {
-    return;
-  }
-  const currentImage = event.target.closest('.js-item');
+// function handlerClick(event) {
+//   event.preventDefault();
+//   if (event.currentTarget === event.target) {
+//     return;
+//   }
+//   const currentImage = event.target.closest('.js-item');
 
-  if (currentImage) {
-    const currentImageSrc = currentImage.querySelector('img').getAttribute('data-source');
-    const currentImageAlt = currentImage.querySelector('img').getAttribute('alt');
+//   if (currentImage) {
+//     const currentImageSrc = currentImage.querySelector('img').getAttribute('data-source');
+//     const currentImageAlt = currentImage.querySelector('img').getAttribute('alt');
 
-    const instance = lightbox.open({
-      source: currentImageSrc,
-      alt: currentImageAlt,
-    });
+//     const instance = lightbox.open({
+//       source: currentImageSrc,
+//       alt: currentImageAlt,
+//     });
 
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        instance.close();
-      }
-    });
-  }
-}
+//     document.addEventListener('keydown', (e) => {
+//       if (e.key === 'Escape') {
+//         instance.close();
+//       }
+//     });
+//   }
+// }
